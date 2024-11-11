@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+    <link rel="stylesheet" href="./payment.css">
   </head>
   <body>
     <div class="container-scroller">
@@ -90,7 +91,7 @@
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
                   <span class="font-weight-bold mb-2">Web D School</span>
-                  <span class="text-secondary text-small">Project Manager</span>
+                  <span class="text-secondary text-small">Web D User</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
               </a>
@@ -248,38 +249,38 @@
                   <div class="card-body">
                     <!-- <h4 class="card-title">Student Enrollment Form</h4> -->
                     <!-- <p class="card-description"> Basic form elements </p> -->
-                    <form class="forms-sample">
+                    <!-- <form onsubmit=" return crud()"> -->
                       <div class="form-group">
-                        <label for="exampleInputName1">Name</label>
+                        <label for="exampleInputName1" id="n1">Name</label>
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="exampleInputEmail3">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-                      </div>
+                      </div> -->
                       <div class="form-group">
                         <label for="exampleInputPassword4">Phone number</label>
-                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                        <input type="number" class="form-control" id="exampleInputPassword4" placeholder="Phone Number">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="exampleSelectGender">Gender</label>
                         <select class="form-select" id="exampleSelectGender">
                           <option>Male</option>
                           <option>Female</option>
                         </select>
-                      </div>
+                      </div> -->
                       <div class="form-group">
                         <label for="exampleSelectGender">Course</label>
                         <select class="form-select" id="exampleSelectGender">
                           <option>Select courses</option>
-                          <option>Full Stack</option>
+                          <option id="fs">Full Stack</option>
                           <option>Ui/Ux design</option>
                           <option>Digital Marketing</option>
                           <option>Graphic Design</option>
                           <option>Video Editing</option>
                         </select>
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="exampleSelectGender">Branch</label>
                         <select class="form-select" id="exampleSelectGender">
                           <option>Select branch</option>
@@ -287,8 +288,16 @@
                           <option>Anna nagar</option>
                           <option>Velachery</option>
                         </select>
+                      </div> -->
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Total Fees</label>
+                        <input type="number" class="form-control" id="exampleInputPassword5" placeholder="Enter total Fees">
                       </div>
                       <div class="form-group">
+                        <label for="exampleInputPassword4">Fee paying</label>
+                        <input type="number" class="form-control" id="exampleInputPassword6" placeholder="Enter the Amount">
+                      </div>
+                      <!-- <div class="form-group">
                         <label>File upload</label>
                         <input type="file" name="img[]" class="file-upload-default">
                         <div class="input-group col-xs-12">
@@ -297,19 +306,45 @@
                             <button class="file-upload-browse btn btn-gradient-primary py-3" type="button">Upload</button>
                           </span>
                         </div>
-                      </div>
-                      <div class="form-group">
+                      </div> -->
+                      <!-- <div class="form-group">
                         <label for="exampleInputCity1">City</label>
                         <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
-                      </div>
-                      <div class="form-group">
+                      </div> -->
+                      <!-- <div class="form-group">
                         <label for="exampleTextarea1">Textarea</label>
                         <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                      </div> -->
+                      <button type="submit" class="btn btn-gradient-primary me-2" id="button">Submit</button>
                       <button class="btn btn-light">Cancel</button>
-                    </form>
+                    <!-- </form> -->
+
                   </div>
+                  <!-- <div class="box"> -->
+
+                    <table id="tableclone">
+                      <thead>
+                        <tr> 
+                              <th class="n1"> Name</th>
+                              <th class="n2">Phone Number</th>
+                              <th class="n3">Course</th>
+                              <th class="n4">Total Fee</th>
+                              <th class="n5">Fee paid</th>
+                              <th class="n6">Balance Fee</th>
+                              <th class="n7"  id="n7">Remove</th>
+                          </tr>
+                       </thead>
+                      
+                     <tbody id="datapass">
+         
+                      </tbody>
+                    </table>
+                  <!-- </div> -->
+                  <div class="b1">
+                    <button  id="printbutton" class="prbutton bg-gradient-primary" >Print</button>
+                  </div>
+                  
+                
                 </div>
               </div> 
               
@@ -317,12 +352,7 @@
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
-          <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
-            </div>
-          </footer>
+          
           <!-- partial -->
         </div>
         <!-- main-panel ends -->
@@ -331,6 +361,7 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
+     <script src="../forms/paymentform.js"></script>
     <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
@@ -348,6 +379,9 @@
     <script src="../../assets/js/file-upload.js"></script>
     <script src="../../assets/js/typeahead.js"></script>
     <script src="../../assets/js/select2.js"></script>
+    <script src="./payment.js"></script>
     <!-- End custom js for this page -->
   </body>
 </html>
+
+

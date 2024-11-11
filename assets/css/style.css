@@ -8834,6 +8834,7 @@ select:disabled {
   display: none !important;
 }
 
+
 button,
 [type=button],
 [type=reset],
@@ -26286,4 +26287,70 @@ dl li {
   -webkit-flex-grow: 1;
   flex-grow: 1;
 }
+#tableclone,#printbutton{
+  display: none;
+}
+.rebutton{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+ 
+}
+
+/* .n1{
+  padding-right: 50px;
+}
+.n2{
+  padding-right: 50px;
+}
+.n3{
+  padding-right: 50px;
+}
+.n4{
+  padding-right: 50px;
+}
+.n5{
+  padding-right: 50px;
+}
+.n6{
+  padding-right: 50px;
+}
+.n7{
+  padding-right: 50px;
+} */
+ th{
+  padding-left: 30px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+   
+ }
+.prbutton{
+  padding: 10px 30px;
+ border: none;
+ border-radius: 5px;
+ color: white;
+ margin-left: 50px;
+ margin-top: 20px;
+}
+td{
+padding-left: 30px;
+padding-top: 20px;
+  padding-bottom: 20px;
+/* border: 1px solid black; */
+}
+#tableclone{
+  margin-left: 50px;
+  
+  /* border: 1px solid black; */
+}
+tr{
+  border: 1px solid black; 
+  justify-content: space-around;
+}
+/* .n3{
+padding-right: 50px;
+} */
 /*# sourceMappingURL=maps/style.css.map */
